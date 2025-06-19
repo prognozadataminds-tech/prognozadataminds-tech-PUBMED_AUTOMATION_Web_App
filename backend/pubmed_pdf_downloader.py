@@ -189,7 +189,7 @@ def process_excel(input_excel_path, output_excel_path):
                         print(f"\n⚠️ Error selecting citation format for single result: {str(e)}")
                         print("Current page source:")
                         print(driver.page_source[:500] + "...")  # Print first 500 chars of page source
-                        df.at[index, 'Comment'] = 'Format selection error (single result)'
+                        df.at[index, 'Comment'] = '(need to download manually)'
                         continue
                 else:
                     print(f"\nProcessing multiple results (count: {result_count})")
